@@ -3,7 +3,7 @@ import Navbar from "../Navbar/Navbar";
 import Services from "../Services/Services";
 import About from "../About Us/About";
 import { FaWhatsappSquare } from "react-icons/fa";
-import Contact from "../ContactFooter/Contact";
+import Contact from "../Contact/Contact";
 import Footer from "../Footer/Footer";
 
 const Home: React.FC = () => {
