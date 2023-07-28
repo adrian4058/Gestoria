@@ -14,6 +14,10 @@
   filter: brightness(1.2); /* Puedes ajustar el valor para controlar la intensidad del brillo */
 }
 
+.content{
+  padding: 0 110px;
+}
+
 
 /* carousel.css */
 .slick-dots {

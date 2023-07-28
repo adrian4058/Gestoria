@@ -25,7 +25,7 @@ const About: React.FC = () => {
   }, []);
 
   return (
-    <div>
+    <div className="content">
       {/* Este es el enlace de scroll que activará la animación */}
       <ScrollLink
         to="animated-content-about"
@@ -36,7 +36,7 @@ const About: React.FC = () => {
         <div
           className={`${
             isVisibleAbout
-              ? "flex mt-10 p-28 animate-fade-down animate-once animate-duration-1200 animate-delay-[300ms] opacity-100"
+              ? "flex pt-32 pb-32 animate-fade-down animate-once animate-duration-1200 animate-delay-[300ms] opacity-100"
               : "opacity-0"
           }`}
         >

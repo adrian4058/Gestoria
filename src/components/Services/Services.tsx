@@ -28,7 +28,7 @@ const Services: React.FC = () => {
   }, []);
 
   return (
-    <div className="flex flex-col  justify-start mt-10">
+    <div className="flex flex-col content justify-start mt-10">
       {/* Este es el enlace de scroll que activará la animación */}
       <ScrollLink to="animated-content" smooth duration={1000}></ScrollLink>
       <Element name="animated-content" id="animated-content">
@@ -39,7 +39,7 @@ const Services: React.FC = () => {
               : "opacity-0"
           }`}
         >
-          <ul className="flex flex-row justify-evenly mt-5">
+          <ul className="flex flex-row justify-between mt-5">
             <li className="flex flex-col items-start text-justify w-80 p-8">
               <div className="flex flex-col items-center w-full mb-5">
                 <RiSuitcaseFill className=" text-[#1B9AAA] text-5xl mb-4" />
@@ -107,7 +107,7 @@ const Services: React.FC = () => {
             </li>
           </ul>
 
-          <ul className="flex flex-row justify-evenly mt-5">
+          <ul className="flex flex-row justify-between mt-5">
             <li className="flex flex-col items-start text-justify w-80 p-8">
               <div className="flex flex-col items-center w-full mb-5">
                 <SlDocs className=" text-[#1B9AAA] text-5xl mb-4" />

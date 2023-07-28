@@ -20,7 +20,7 @@ const Home: React.FC = () => {
         <About />
       </section>
       <section id="budget"></section>
-      <section id="contact">
+      <section id="contact" className="pt-8">
         <Contact />
       </section>
       <Footer/>

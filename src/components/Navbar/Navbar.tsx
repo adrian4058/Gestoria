@@ -9,8 +9,8 @@ const Navbar: React.FC = () => {
   console.log(activeSection);
 
   return (
-    <header className="bg-[#e5e6e4] flex fixed z-50 w-screen h-20 items-center content-center justify-between border-b border-gray-400 animate-fade-right animate-once animate-duration-1000 animate-delay-[450ms]">
-      <nav className="ml-44 flex flex-row content-center items-center">
+    <header className="bg-[#e5e6e4] content flex fixed z-50 w-screen h-20 items-center content-center justify-between border-b border-gray-400 animate-fade-right animate-once animate-duration-1000 animate-delay-[450ms]">
+      <nav className="flex flex-row content-center items-center">
         <a href="#home" className="flex">
           <img className="w-28 h-28 " src={car} />
           <div className="flex flex-col justify-center content-evenly">
@@ -23,7 +23,7 @@ const Navbar: React.FC = () => {
           </div>
         </a>
       </nav>
-      <nav className="mr-44 flex">
+      <nav className="flex">
         <ul className="flex space-x-12">
           <li>
             <a

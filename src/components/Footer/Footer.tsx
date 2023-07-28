@@ -11,7 +11,7 @@ const Footer: React.FC = () => {
     <div className="w-full h-[250px] flex flex-col justify-between  pb-6 bg-[#e5e6e4] border-t border-gray-400">
       <div className="flex h-3/4 justify-between items-center">
         <div className="flex flex-col space-y-4 justify-evenly">
-          <a href="#home" className="flex ml-40 w-fit items-center">
+          <a href="#home" className="flex ml-32 w-fit items-center">
             <img className="w-20 h-20 " src={car} />
             <div className="flex flex-col items-center justify-center">
               <h1 className="absolute mb-5 text-1xl font-semibold ">
@@ -22,7 +22,7 @@ const Footer: React.FC = () => {
               </h1>
             </div>
           </a>
-          <ul className="flex space-x-7 ml-40 w-fit ">
+          <ul className="flex space-x-7 ml-32 w-fit ">
             <a href="">
               <li className="flex justify-center items-center w-[45px] h-[45px] bg-gray-300 rounded-[50%]">
                 <AiFillInstagram className="text-[#E4405F] text-3xl hover:text-[#e4405fbb] " />
@@ -40,7 +40,7 @@ const Footer: React.FC = () => {
             </a>
           </ul>
         </div>
-        <ul className="flex flex-col mr-44 items-start justify-center content-center space-y-1 ">
+        <ul className="flex flex-col mr-36 items-start justify-center content-center space-y-1 ">
           <li className="text-sm font-medium text-gray-600 hover:text-[#ef8354]">
             <a href="#home">INICIO</a>
           </li>
@@ -59,10 +59,10 @@ const Footer: React.FC = () => {
         </ul>
       </div>
       <div className="flex justify-between border-t border-gray-600 pt-6">
-        <h1 className="ml-40 text-gray-600">
+        <h1 className="ml-32 text-gray-600">
           ©2023 Gestoría Adriana. Todos los derechos reservados
         </h1>
-        <h1 className="text-cyan-600 mr-40 underline">
+        <h1 className="text-cyan-600 mr-32 underline">
           <a
             href="https://www.linkedin.com/in/adrian4058"
             className="flex text-base  hover:text-cyan-500 items-center"
