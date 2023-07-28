@@ -2,8 +2,8 @@ import penhand from "../img/PenHand.jpg";
 import { useState, useEffect } from "react";
 import { Link as ScrollLink, Element, scroller } from "react-scroll";
 
-const About = () => {
-  const [isVisibleAbout, setIsVisibleAbout] = useState(false);
+const About: React.FC = () => {
+  const [isVisibleAbout, setIsVisibleAbout] = useState<boolean>(false);
 
   const handleScroll = () => {
     const animatedElementabout = document.getElementById(

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import car from "../img/Car_Front.png";
 
-const Navbar = () => {
+const Navbar: React.FC = () => {
   const [activeSection, setActiveSection] = useState<string>("home");
   const handleSectionClick = (section: string) => {
     setActiveSection(section);
@@ -9,7 +9,7 @@ const Navbar = () => {
   console.log(activeSection);
 
   return (
-    <header className="bg-[#d8e2dc] flex fixed z-50 w-screen h-20 items-center content-center justify-between border-b border-gray-400 animate-fade-right animate-once animate-duration-1000 animate-delay-[450ms]">
+    <header className="bg-[#e5e6e4] flex fixed z-50 w-screen h-20 items-center content-center justify-between border-b border-gray-400 animate-fade-right animate-once animate-duration-1000 animate-delay-[450ms]">
       <nav className="ml-44 flex flex-row content-center items-center">
         <a href="#home" className="flex">
           <img className="w-28 h-28 " src={car} />

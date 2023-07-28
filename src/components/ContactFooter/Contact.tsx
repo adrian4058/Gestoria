@@ -4,18 +4,20 @@ import { TbWorldWww } from "react-icons/tb";
 import { AiOutlineMail } from "react-icons/ai";
 import { FiPhoneCall } from "react-icons/fi";
 
-const ContactFooter = () => {
+const Contact: React.FC = () => {
   return (
     <div className="flex p-24 w-full h-full justify-evenly pb-28">
       <ul className="flex flex-col space-y-6 items-start justify-center">
-        <h1  className="font-black text-[#1B9AAA] text-4xl underline">
+        <h1 className="font-black text-[#1B9AAA] text-4xl underline">
           Contacto
         </h1>
         <li className="flex items-center">
           <VscLocation className=" text-[#1B9AAA] text-3xl mr-2" />
           <p className="text-gray-600 font-medium">
-            Roque Sanez Peña 551, Sunchales, Santa Fe. <br /> Pasillo interno,
-            última casa a la izquierda
+            Roque Sanez Peña 551, Sunchales, Santa Fe. <br />{" "}
+            <b className="text-sm">
+              (Pasillo interno, última casa a la izquierda)
+            </b>
           </p>
         </li>
         <li className="flex items-center">
@@ -35,7 +37,7 @@ const ContactFooter = () => {
         </li>
         <li className="flex items-center">
           <TbWorldWww className=" text-[#1B9AAA] text-3xl mr-2" />
-          <a 
+          <a
             href="https://gestorautomotorortega.com.ar/contacto/"
             className="text-gray-600 font-medium"
           >
@@ -43,9 +45,9 @@ const ContactFooter = () => {
           </a>
         </li>
       </ul>
-      <Maps  />
+      <Maps />
     </div>
   );
 };
 
-export default ContactFooter;
+export default Contact;

@@ -7,7 +7,7 @@ import img3 from "../img/audia4-3.jpg";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-const Slider = () => {
+const Slider: React.FC = () => {
   const settings: SliderSettings = {
     dots: true,
     infinite: true,
