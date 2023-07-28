@@ -8,7 +8,7 @@ import { IoMdMail } from "react-icons/io";
 
 const Footer: React.FC = () => {
   return (
-    <div className="w-full h-[300px] flex flex-col justify-between pt-6 pb-6 bg-[#e5e6e4] border-t border-gray-400">
+    <div className="w-full h-[250px] flex flex-col justify-between  pb-6 bg-[#e5e6e4] border-t border-gray-400">
       <div className="flex h-3/4 justify-between items-center">
         <div className="flex flex-col space-y-4 justify-evenly">
           <a href="#home" className="flex ml-40 w-fit items-center">
