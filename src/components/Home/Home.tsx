@@ -5,6 +5,7 @@ import About from "../About Us/About";
 import { FaWhatsappSquare } from "react-icons/fa";
 import Contact from "../Contact/Contact";
 import Footer from "../Footer/Footer";
+import Budgets from "../Budgets/Budgets";
 
 const Home: React.FC = () => {
   return (
@@ -19,7 +20,9 @@ const Home: React.FC = () => {
       <section id="about">
         <About />
       </section>
-      <section id="budget"></section>
+      <section id="budget" className="pt-20">
+        <Budgets/>
+      </section>
       <section id="contact" className="pt-8">
         <Contact />
       </section>
