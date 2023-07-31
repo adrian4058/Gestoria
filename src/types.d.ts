@@ -9,4 +9,9 @@ export interface SliderSettings {
   arrows: boolean;
 }
 
+interface Link {
+  name: string;
+  link: string;
+}
+
 
