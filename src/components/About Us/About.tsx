@@ -1,6 +1,6 @@
 import penhand from "../img/PenHand.jpg";
 import { useState, useEffect } from "react";
-import { Link as ScrollLink, Element, scroller } from "react-scroll";
+import { Link as ScrollLink, Element } from "react-scroll";
 
 const About: React.FC = () => {
   const [isVisibleAbout, setIsVisibleAbout] = useState<boolean>(false);

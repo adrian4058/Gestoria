@@ -5,7 +5,7 @@ import { SlDocs } from "react-icons/sl";
 import { FaCarCrash } from "react-icons/fa";
 import { FaCar } from "react-icons/fa";
 import { useState, useEffect } from "react";
-import { Link as ScrollLink, Element, scroller } from "react-scroll";
+import { Link as ScrollLink, Element } from "react-scroll";
 
 const Services: React.FC = () => {
   const [isVisible, setIsVisible] = useState<boolean>(false);

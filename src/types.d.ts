@@ -9,9 +9,13 @@ export interface SliderSettings {
   arrows: boolean;
 }
 
-interface Link {
+export interface Link {
   name: string;
   link: string;
 }
 
 
+export interface AlertProps {
+  type: "success" | "error" | "warning";
+  message: string;
+}

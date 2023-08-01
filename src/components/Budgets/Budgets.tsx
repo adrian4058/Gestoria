@@ -1,5 +1,7 @@
 import { useRef } from "react";
 import emailjs from "@emailjs/browser";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/ReactToastify.css";
 
 const Budgets: React.FC = () => {
   const formRef = useRef<HTMLFormElement | null>(null);
@@ -18,9 +20,32 @@ const Budgets: React.FC = () => {
         .then(
           (result) => {
             console.log(result.text);
+            toast.success("🦄 Consulta enviada!", {
+              position: "top-center",
+              autoClose: 2000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: true,
+              draggable: true,
+              progress: undefined,
+              theme: "dark",
+            });
           },
           (error) => {
             console.log(error.text);
+            toast.warn(
+              "🦄 Error al enviar consulta, comunicate por WhatsApp!",
+              {
+                position: "top-center",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "dark",
+              }
+            );
           }
         );
       e.currentTarget.reset(); // Utilizar e.currentTarget para resetear el formulario
@@ -111,6 +136,7 @@ const Budgets: React.FC = () => {
           Enviar Consulta
         </button>
       </form>
+      <ToastContainer />
     </div>
   );
 };
