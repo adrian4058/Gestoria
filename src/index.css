@@ -4,20 +4,18 @@
 
 :root {
   background-color: #ecf8f8;
-  width: 100vw;
+  max-width: 100vw;
   font-family: "Mulish", sans-serif;
   overflow-x: hidden;
 }
+
+
+
 
 /* CSS personalizado para aplicar el brillo */
 .custom-brightness {
   filter: brightness(1.2); /* Puedes ajustar el valor para controlar la intensidad del brillo */
 }
-
-.content{
-  padding: 0 110px;
-}
-
 
 /* carousel.css */
 .slick-dots {

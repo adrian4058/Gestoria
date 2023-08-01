@@ -22,11 +22,11 @@ const Slider: React.FC = () => {
   return (
     <div className="animate-fade-right animate-once animate-duration-1000 animate-delay-[450ms]">
       <SlickSlider {...settings}>
-        <img className="h-screen" src={img1} />
-        <img className="h-screen" src={img2} />
-        <img className="h-screen" src={img3} />
+        <img className="w-full h-screen object-cover md:w-2/3 lg:w-1/2" src={img1} />
+        <img className="w-full h-screen object-cover md:w-2/3 lg:w-1/2" src={img2} />
+        <img className="w-full h-screen object-cover md:w-2/3 lg:w-1/2" src={img3} />
       </SlickSlider>
-      <h1 className="bg-[#05050596] absolute bottom-24 left-16 z-30 font-bold text-3xl p-2 rounded-lg text-white ">
+      <h1 className="bg-[#05050596] absolute bottom-24 left-16 z-30 font-bold md:text-3xl p-2 rounded-lg text-white ">
         GESTIÓN Y ASESORAMIENTO DE DOCUMENTACIÓN AUTOMOTRIZ.
       </h1>
     </div>

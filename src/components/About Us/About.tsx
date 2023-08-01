@@ -25,7 +25,7 @@ const About: React.FC = () => {
   }, []);
 
   return (
-    <div className="content">
+    <div className="w-full pt-28">
       {/* Este es el enlace de scroll que activará la animación */}
       <ScrollLink
         to="animated-content-about"
@@ -36,16 +36,16 @@ const About: React.FC = () => {
         <div
           className={`${
             isVisibleAbout
-              ? "flex pt-32 pb-32 animate-fade-down animate-once animate-duration-1200 animate-delay-[300ms] opacity-100"
+              ? "flex flex-col md:flex-row animate-fade-down animate-once animate-duration-1200 animate-delay-[300ms] opacity-100"
               : "opacity-0"
           }`}
         >
-          <img className="w-[700px]" src={penhand} />
-          <div className="flex flex-col space-y-6 justify-center items-center">
-            <h1 className="font-black text-[#1B9AAA] text-4xl underline">
+          <img className="md:w-2/5 pl-9 max-md:pl-0 w-full " src={penhand} />
+          <div className="flex flex-col justify-center items-center">
+            <h1 className="font-black text-[#1B9AAA] text-4xl max-md:pt-6">
               Sobre Nosotros
             </h1>
-            <p className="ml-14 text-justify text-gray-600 font-medium">
+            <p className="max-md:px-6  px-20 py-4 text-justify text-gray-600 font-medium">
               El Mandatario del Automotor es el profesional certificado por la
               Dirección Nacional de Registros de la Propiedad Automotor y
               Créditos Prendarios, que te guía al momento de llevar a cabo
