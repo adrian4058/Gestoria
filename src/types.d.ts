@@ -1,10 +1,3 @@
-export interface Sub {
-  nick: string;
-  avatar: string;
-  subMonths: number;
-  description?: string;
-}
-
 export interface SliderSettings {
   dots: boolean;
   infinite: boolean;
@@ -15,3 +8,10 @@ export interface SliderSettings {
   autoplaySpeed: number;
   arrows: boolean;
 }
+
+interface Link {
+  name: string;
+  link: string;
+}
+
+

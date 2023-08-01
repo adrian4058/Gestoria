@@ -1,76 +1,81 @@
 import { useState } from "react";
 import car from "../img/Car_Front.png";
+import { Link } from "../../types";
+import { GiHamburgerMenu } from "react-icons/gi";
+import { AiOutlineClose } from "react-icons/ai";
 
-const Navbar = () => {
+const Navbar: React.FC = () => {
   const [activeSection, setActiveSection] = useState<string>("home");
+  const [open, setOpen] = useState<boolean>(false);
   const handleSectionClick = (section: string) => {
     setActiveSection(section);
   };
-  console.log(activeSection);
+
+  const Links: Link[] = [
+    {
+      name: "Inicio",
+      link: "#home",
+    },
+    {
+      name: "Servicios",
+      link: "#services",
+    },
+    {
+      name: "Nosotros",
+      link: "#about",
+    },
+    {
+      name: "Presupuestos",
+      link: "#budget",
+    },
+    {
+      name: "Contacto",
+      link: "#contact",
+    },
+  ];
 
   return (
-    <header className="bg-[#d8e2dc] flex fixed z-50 w-screen h-20 items-center content-center justify-between animate-fade-right animate-once animate-duration-1000 animate-delay-[450ms]">
-      <nav className="ml-44 flex flex-row content-center items-center">
-        <img className="w-28 h-28 " src={car} />
-        <div className="flex flex-col justify-center content-evenly">
-          <h1 className="fixed mb-6 ml-2 text-2xl font-semibold ">Gestoría</h1>
-          <h1 className="fixed mt-6 ml-4 text-3xl font-extrabold text-[#eb5e28]">
-            Adriana
-          </h1>
+    <header className="bg-[#e5e6e4] fixed top-0 left-0 z-50 w-full items-center lg:pl-16 lg:pr-16 lg:flex ">
+      <nav className="md:flex w-full justify-between items-center mx-5">
+        <a href="#home" className="flex items-center z-50">
+          <img className="w-24 h-24 mr-2" src={car} />
+          <div className="">
+            <h1 className="text-2xl text-gray-600 font-semibold ">Gestoría</h1>
+            <h1 className="text-3xl font-extrabold text-[#eb5e28]">Adriana</h1>
+          </div>
+        </a>
+        <div
+          onClick={() => setOpen(!open)}
+          className="lg:hidden cursor-pointer z-50 absolute right-8 top-8"
+        >
+          {open ? (
+            <AiOutlineClose className="text-2xl hover:text-gray-500 duration-500" />
+          ) : (
+            <GiHamburgerMenu className="text-2xl hover:text-gray-500 duration-200" />
+          )}
         </div>
-      </nav>
-      <nav className="mr-44 flex">
-        <ul className="flex space-x-12">
-          <li>
-            <a
-              onClick={() => handleSectionClick("home")}
-              className={`${
-                activeSection === "home"
-                  ? "text-xl text-[#eb5e28] font-semibold underline block py-2 pl-3 pr-4  rounded md:p-0 "
-                  : "text-xl block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 hover:underline md:hover:bg-transparent md:border-0 md:hover:text-[#ef8354] md:p-0 dark:text-black md:dark:hover:text-[#ef8354] dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-              }`}
-              href="#home"
-            >
-              Inicio
-            </a>
-          </li>
-          <li>
-            <a
-              onClick={() => handleSectionClick("services")}
-              className={`${
-                activeSection === "services"
-                  ? "text-xl text-[#eb5e28] font-semibold underline block py-2 pl-3 pr-4  rounded md:p-0 "
-                  : "text-xl block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 hover:underline md:hover:bg-transparent md:border-0 md:hover:text-[#ef8354] md:p-0 dark:text-black md:dark:hover:text-[#ef8354] dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-              }`}
-              href="#services"
-            >
-              Servicios
-            </a>
-          </li>
-          <li>
-            <a className="text-xl block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-black md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
-              Nosotros
-            </a>
-          </li>
-          <li>
-            <a className="text-xl block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-black md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
-              Datos útiles
-            </a>
-          </li>
-          <li>
-            <a onClick={() => handleSectionClick("presupuestos")}
-              className={`${
-                activeSection === "presupuestos"
-                  ? "text-xl text-[#eb5e28] font-semibold underline block py-2 pl-3 pr-4  rounded md:p-0 "
-                  : "text-xl block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 hover:underline md:hover:bg-transparent md:border-0 md:hover:text-[#ef8354] md:p-0 dark:text-black md:dark:hover:text-[#ef8354] dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-              }`}
-              href="#">Presupuestos</a>
-          </li>
-          <li>
-            <a className="text-xl block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-black md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
-              Contacto
-            </a>
-          </li>
+
+        <ul
+          className={`lg:flex lg:items-center lg:pb-0 max-lg:py-6 absolute lg:static bg-[#e5e6e4] lg:z-auto z-[-1] left-0 w-full lg:w-auto transition-all duration-500 ease-in ${
+            open ? "top-20 " : "top-[-490px]"
+          }`}
+        >
+          {Links.map((link) => (
+            <li className="lg:px-0 rounded p-3 ">
+              <a
+                onClick={() => handleSectionClick(`${link.name}`)}
+                className={`${
+                  activeSection === `${link.name}`
+                    ? "px-3 text-xl text-[#eb5e28] font-black rounded"
+                    : "px-3 text-xl block font-semibold text-gray-600 rounded hover:text-[#ef8354]  hover:max-lg:bg-white hover:max-lg:no-underline duration-300"
+                }`}
+                href={`${link.link}`}
+              >
+                {link.name}
+              </a>
+            </li>
+          ))}
+          
         </ul>
       </nav>
     </header>

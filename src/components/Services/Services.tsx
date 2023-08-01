@@ -7,8 +7,8 @@ import { FaCar } from "react-icons/fa";
 import { useState, useEffect } from "react";
 import { Link as ScrollLink, Element, scroller } from "react-scroll";
 
-const Services = () => {
-  const [isVisible, setIsVisible] = useState(false);
+const Services: React.FC = () => {
+  const [isVisible, setIsVisible] = useState<boolean>(false);
 
   const handleScroll = () => {
     const animatedElement = document.getElementById("animated-content");
@@ -28,7 +28,7 @@ const Services = () => {
   }, []);
 
   return (
-    <div className="flex flex-col  justify-start mt-10" >
+    <div className="flex flex-col content justify-start mt-10 mx-20">
       {/* Este es el enlace de scroll que activará la animación */}
       <ScrollLink to="animated-content" smooth duration={1000}></ScrollLink>
       <Element name="animated-content" id="animated-content">
@@ -39,11 +39,13 @@ const Services = () => {
               : "opacity-0"
           }`}
         >
-          <ul className="flex flex-row justify-evenly mt-5" >
+          <ul className="flex flex-row justify-between mt-5 max-md:flex-col max-md:items-center">
             <li className="flex flex-col items-start text-justify w-80 p-8">
               <div className="flex flex-col items-center w-full mb-5">
                 <RiSuitcaseFill className=" text-[#1B9AAA] text-5xl mb-4" />
-                <h3 className="text-center text-2xl font-extrabold">Trámites de Rentas</h3>
+                <h3 className="text-center text-2xl font-extrabold">
+                  Trámites de Rentas
+                </h3>
               </div>
               <p className="text-gray-600">
                 - Altas y Bajas por cambio de radicación.
@@ -65,7 +67,9 @@ const Services = () => {
             <li className="flex flex-col items-start text-justify w-80 p-8">
               <div className="flex flex-col items-center w-full mb-5">
                 <PiNotePencilThin className=" text-[#1B9AAA] text-5xl mb-4" />
-                <h3 className="text-center text-2xl font-extrabold">Trámites de Usados</h3>
+                <h3 className="text-center text-2xl font-extrabold">
+                  Trámites de Usados
+                </h3>
               </div>
               <p className="text-gray-600">
                 - Solicitud, renovación, revocación y pedido de duplicados de
@@ -83,7 +87,9 @@ const Services = () => {
             <li className="flex flex-col items-start text-justify w-80 p-8">
               <div className="flex flex-col items-center w-full mb-5">
                 <LiaCommentDollarSolid className=" text-[#1B9AAA] text-5xl mb-4" />
-                <h3 className="text-center text-2xl font-extrabold">Venta de Vehículos</h3>
+                <h3 className="text-center text-2xl font-extrabold">
+                  Venta de Vehículos
+                </h3>
               </div>
               <p className="text-gray-600">- Denuncia de venta.</p>
               <p className="text-gray-600">
@@ -101,11 +107,13 @@ const Services = () => {
             </li>
           </ul>
 
-          <ul className="flex flex-row justify-evenly mt-5">
+          <ul className="flex flex-row justify-between mt-5 max-md:flex-col max-md:items-center">
             <li className="flex flex-col items-start text-justify w-80 p-8">
               <div className="flex flex-col items-center w-full mb-5">
                 <SlDocs className=" text-[#1B9AAA] text-5xl mb-4" />
-                <h3 className="text-center text-2xl font-extrabold">Otros trámites</h3>
+                <h3 className="text-center text-2xl font-extrabold">
+                  Otros trámites
+                </h3>
               </div>
               <p className="text-gray-600">
                 - Confección de contratos de prendas, inscripción y cancelación
@@ -146,7 +154,9 @@ const Services = () => {
             <li className="flex flex-col items-start text-justify w-80 p-8">
               <div className="flex flex-col items-center w-full mb-5">
                 <FaCar className=" text-[#1B9AAA] text-5xl mb-4" />
-                <h3 className="text-center text-2xl font-extrabold">Trámites de 0km</h3>
+                <h3 className="text-center text-2xl font-extrabold">
+                  Trámites de 0km
+                </h3>
               </div>
               <p className="text-gray-600">
                 - Inscripción inicial (patentamientos) de su Automóvil,
