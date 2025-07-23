@@ -11,9 +11,11 @@ const Home: React.FC = () => {
   return (
     <div className="w-full min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="relative bg-white" id="home">
+      <section className="relative bg-white min-h-screen" id="home">
         <Navbar />
-        <Slider />
+        <div className="pt-20">
+          <Slider />
+        </div>
       </section>
 
       {/* Services Section */}

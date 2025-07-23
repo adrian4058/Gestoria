@@ -134,3 +134,25 @@ html {
 .slick-dots li.slick-active button {
   background-color: #1b9aaa !important; /* !important para dar prioridad */
 }
+
+/* Estilos adicionales para el slider */
+.slick-slider {
+  display: block !important;
+}
+
+.slick-list {
+  overflow: hidden !important;
+}
+
+.slick-track {
+  display: flex !important;
+  align-items: center !important;
+}
+
+.slick-slide {
+  outline: none !important;
+}
+
+.slick-slide > div {
+  outline: none !important;
+}
