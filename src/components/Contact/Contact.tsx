@@ -7,44 +7,44 @@ import { FiPhoneCall } from "react-icons/fi";
 const Contact: React.FC = () => {
   return (
     <div className="flex content justify-between mt-28 mb-52">
-      <div className="md:flex max-md:px-6 px-9 items-center w-full justify-between">
-        <ul className="flex flex-col items-start  justify-center ">
-          <h1 className="font-black text-[#1B9AAA] text-4xl">Contacto</h1>
-          <li className="flex items-start py-4">
-            <VscLocation className="md:text-2x1 mt-1 text-[#1B9AAA] text-3xl mr-2" />
-            <p className="text-gray-600 font-medium">
-              Roque Sanez Peña 551, Sunchales, Santa Fe. <br />{" "}
-              <b className="text-sm">
-                (Pasillo interno, última casa a la izquierda)
-              </b>
-            </p>
-          </li>
-          <li className="flex items-start py-4">
-            <AiOutlineMail className="md:text-2x1 text-[#1B9AAA] text-3xl mr-2" />
-            <a
-              href="mailto:gestoria.adriana81@gmail.com"
-              className="text-gray-600 font-medium"
-            >
-              gestoria.adriana81@gmail.com
-            </a>
-          </li>
-          <li className="flex items-start py-4">
-            <FiPhoneCall className="md:text-2x1 text-[#1B9AAA] text-3xl mr-2" />
-            <a href="tel:+5493493416819" className="text-gray-600 font-medium">
-              +54 3493 416819
-            </a>
-          </li>
-          <li className="flex items-start py-4">
-            <TbWorldWww className="md:text-2x1 text-[#1B9AAA] text-3xl mr-2" />
-            <a
-              href="https://gestorautomotorortega.com.ar/contacto/"
-              className="text-gray-600 font-medium"
-            >
-              www.gestoriaadriana.com
-            </a>
-          </li>
-        </ul>
-        <div className="w-full md:h-3/4 z z-10 md:px-20">
+      <div className="flex flex-col lg:flex-row items-start w-full justify-between gap-8">
+        <div className="flex flex-col items-start justify-center flex-1">
+          <h1 className="font-black text-[#1B9AAA] text-4xl mb-6">Contacto</h1>
+          <ul className="space-y-6">
+            <li className="flex items-start">
+              <VscLocation className="text-[#1B9AAA] text-3xl mr-3 mt-1 flex-shrink-0" />
+              <p className="text-gray-600 font-medium">
+                Roque Sanez Peña 551, Sunchales, Santa Fe. <br />{" "}
+                <b className="text-sm">(Pasillo interno, última casa a la izquierda)</b>
+              </p>
+            </li>
+            <li className="flex items-start">
+              <AiOutlineMail className="text-[#1B9AAA] text-3xl mr-3 flex-shrink-0" />
+              <a
+                href="mailto:gestoria.adriana81@gmail.com"
+                className="text-gray-600 font-medium hover:text-[#1B9AAA] transition-colors"
+              >
+                gestoria.adriana81@gmail.com
+              </a>
+            </li>
+            <li className="flex items-start">
+              <FiPhoneCall className="text-[#1B9AAA] text-3xl mr-3 flex-shrink-0" />
+              <a href="tel:+5493493416819" className="text-gray-600 font-medium hover:text-[#1B9AAA] transition-colors">
+                +54 3493 416819
+              </a>
+            </li>
+            <li className="flex items-start">
+              <TbWorldWww className="text-[#1B9AAA] text-3xl mr-3 flex-shrink-0" />
+              <a
+                href="https://gestorautomotorortega.com.ar/contacto/"
+                className="text-gray-600 font-medium hover:text-[#1B9AAA] transition-colors"
+              >
+                www.gestoriaadriana.com
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div className="w-full lg:w-1/2 h-80 lg:h-96">
           <Maps />
         </div>
       </div>

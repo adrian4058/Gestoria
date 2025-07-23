@@ -28,7 +28,18 @@ const Services: React.FC = () => {
   }, []);
 
   return (
-    <div className="flex flex-col content justify-start mt-10 mx-20">
+    <div className="flex flex-col content justify-start mt-10">
+      {/* Título de sección moderno */}
+      <div className="text-center mb-12">
+        <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+          Nuestros <span className="text-[#1B9AAA]">Servicios</span>
+        </h2>
+        <div className="w-24 h-1 bg-gradient-to-r from-[#1B9AAA] to-[#06D6A0] mx-auto rounded-full"></div>
+        <p className="text-gray-600 mt-4 max-w-2xl mx-auto text-lg">
+          Ofrecemos una amplia gama de servicios especializados en trámites automotores
+        </p>
+      </div>
+
       {/* Este es el enlace de scroll que activará la animación */}
       <ScrollLink to="animated-content" smooth duration={1000}></ScrollLink>
       <Element name="animated-content" id="animated-content">
@@ -39,133 +50,187 @@ const Services: React.FC = () => {
               : "opacity-0"
           }`}
         >
-          <ul className="flex flex-row justify-between mt-5 max-md:flex-col max-md:items-center">
-            <li className="flex flex-col items-start text-justify w-80 p-8">
-              <div className="flex flex-col items-center w-full mb-5">
-                <RiSuitcaseFill className=" text-[#1B9AAA] text-5xl mb-4" />
-                <h3 className="text-center text-2xl font-extrabold">
+          <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-5">
+            <li className="group flex flex-col items-start text-justify p-8 bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
+              <div className="flex flex-col items-center w-full mb-6">
+                <div className="p-4 bg-gradient-to-br from-[#1B9AAA] to-[#06D6A0] rounded-2xl mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <RiSuitcaseFill className="text-white text-4xl" />
+                </div>
+                <h3 className="text-center text-2xl font-bold text-gray-800 group-hover:text-[#1B9AAA] transition-colors">
                   Trámites de Rentas
                 </h3>
               </div>
-              <p className="text-gray-600">
-                - Altas y Bajas por cambio de radicación.
-              </p>
-              <p className="text-gray-600">
-                - Baja de patentes por Siniestro, Robo, Hurto o Destrucción.
-              </p>
-              <p className="text-gray-600">- Alta de patentes por Recupero.</p>
-              <p className="text-gray-600">
-                - Estado de Deudas, Impresión de Boletas para el pago y pedido
-                de Plan de Facilidades.
-              </p>
-              <p className="text-gray-600">- Cambio de titularidad.</p>
-              <p className="text-gray-600">
-                - Presentación de la Denuncia de Venta ante Rentas y ante el
-                Tribunal de Faltas.
-              </p>
+              <ul className="space-y-3 text-gray-600 leading-relaxed">
+                <li className="flex items-start">
+                  <span className="text-[#1B9AAA] mr-2">•</span>
+                  Altas y Bajas por cambio de radicación.
+                </li>
+                <li className="flex items-start">
+                  <span className="text-[#1B9AAA] mr-2">•</span>
+                  Baja de patentes por Siniestro, Robo, Hurto o Destrucción.
+                </li>
+                <li className="flex items-start">
+                  <span className="text-[#1B9AAA] mr-2">•</span>
+                  Alta de patentes por Recupero.
+                </li>
+                <li className="flex items-start">
+                  <span className="text-[#1B9AAA] mr-2">•</span>
+                  Estado de Deudas, Impresión de Boletas para el pago y pedido de Plan de Facilidades.
+                </li>
+                <li className="flex items-start">
+                  <span className="text-[#1B9AAA] mr-2">•</span>
+                  Cambio de titularidad.
+                </li>
+                <li className="flex items-start">
+                  <span className="text-[#1B9AAA] mr-2">•</span>
+                  Presentación de la Denuncia de Venta ante Rentas y ante el Tribunal de Faltas.
+                </li>
+              </ul>
             </li>
-            <li className="flex flex-col items-start text-justify w-80 p-8">
-              <div className="flex flex-col items-center w-full mb-5">
-                <PiNotePencilThin className=" text-[#1B9AAA] text-5xl mb-4" />
-                <h3 className="text-center text-2xl font-extrabold">
+            <li className="group flex flex-col items-start text-justify p-8 bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
+              <div className="flex flex-col items-center w-full mb-6">
+                <div className="p-4 bg-gradient-to-br from-[#1B9AAA] to-[#06D6A0] rounded-2xl mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <PiNotePencilThin className="text-white text-4xl" />
+                </div>
+                <h3 className="text-center text-2xl font-bold text-gray-800 group-hover:text-[#1B9AAA] transition-colors">
                   Trámites de Usados
                 </h3>
               </div>
-              <p className="text-gray-600">
-                - Solicitud, renovación, revocación y pedido de duplicados de
-                cédulas de identificación (verde) y autorizados a conducir (azul
-                o rosa).
-              </p>
-              <p className="text-gray-600">- Duplicado de títulos.</p>
-              <p className="text-gray-600">- Duplicado de chapas metálicas.</p>
-              <p className="text-gray-600">
-                - Transferencia por compraventa, sucesión, remate y otras
-                operaciones.
-              </p>
-              <p className="text-gray-600">- Denuncia de compra.</p>
+              <ul className="space-y-3 text-gray-600 leading-relaxed">
+                <li className="flex items-start">
+                  <span className="text-[#1B9AAA] mr-2">•</span>
+                  Solicitud, renovación, revocación y pedido de duplicados de cédulas de identificación (verde) y
+                  autorizados a conducir (azul o rosa).
+                </li>
+                <li className="flex items-start">
+                  <span className="text-[#1B9AAA] mr-2">•</span>
+                  Duplicado de títulos.
+                </li>
+                <li className="flex items-start">
+                  <span className="text-[#1B9AAA] mr-2">•</span>
+                  Duplicado de chapas metálicas.
+                </li>
+                <li className="flex items-start">
+                  <span className="text-[#1B9AAA] mr-2">•</span>
+                  Transferencia por compraventa, sucesión, remate y otras operaciones.
+                </li>
+                <li className="flex items-start">
+                  <span className="text-[#1B9AAA] mr-2">•</span>
+                  Denuncia de compra.
+                </li>
+              </ul>
             </li>
-            <li className="flex flex-col items-start text-justify w-80 p-8">
-              <div className="flex flex-col items-center w-full mb-5">
-                <LiaCommentDollarSolid className=" text-[#1B9AAA] text-5xl mb-4" />
-                <h3 className="text-center text-2xl font-extrabold">
+            <li className="group flex flex-col items-start text-justify p-8 bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
+              <div className="flex flex-col items-center w-full mb-6">
+                <div className="p-4 bg-gradient-to-br from-[#1B9AAA] to-[#06D6A0] rounded-2xl mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <LiaCommentDollarSolid className="text-white text-4xl" />
+                </div>
+                <h3 className="text-center text-2xl font-bold text-gray-800 group-hover:text-[#1B9AAA] transition-colors">
                   Venta de Vehículos
                 </h3>
               </div>
-              <p className="text-gray-600">- Denuncia de venta.</p>
-              <p className="text-gray-600">
-                - Llenado de la Verificación Policial (formulario 12).
-              </p>
-              <p className="text-gray-600">
-                - Informes y certificados de dominio actuales e históricos para
-                identificar a los titulares y si pesa algún tipo de prenda sobre
-                el vehículo o inhibición..
-              </p>
-              <p className="text-gray-600">
-                - Consulta de infracciones de tránsito en la totalidad de las
-                juridicciones adheridas (formulario 13 i).
-              </p>
+              <ul className="space-y-3 text-gray-600 leading-relaxed">
+                <li className="flex items-start">
+                  <span className="text-[#1B9AAA] mr-2">•</span>
+                  Denuncia de venta.
+                </li>
+                <li className="flex items-start">
+                  <span className="text-[#1B9AAA] mr-2">•</span>
+                  Llenado de la Verificación Policial (formulario 12).
+                </li>
+                <li className="flex items-start">
+                  <span className="text-[#1B9AAA] mr-2">•</span>
+                  Informes y certificados de dominio actuales e históricos para identificar a los titulares y si pesa
+                  algún tipo de prenda sobre el vehículo o inhibición.
+                </li>
+                <li className="flex items-start">
+                  <span className="text-[#1B9AAA] mr-2">•</span>
+                  Consulta de infracciones de tránsito en la totalidad de las juridicciones adheridas (formulario 13 i).
+                </li>
+              </ul>
             </li>
           </ul>
 
-          <ul className="flex flex-row justify-between mt-5 max-md:flex-col max-md:items-center">
-            <li className="flex flex-col items-start text-justify w-80 p-8">
-              <div className="flex flex-col items-center w-full mb-5">
-                <SlDocs className=" text-[#1B9AAA] text-5xl mb-4" />
-                <h3 className="text-center text-2xl font-extrabold">
+          <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+            <li className="group flex flex-col items-start text-justify p-8 bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
+              <div className="flex flex-col items-center w-full mb-6">
+                <div className="p-4 bg-gradient-to-br from-[#1B9AAA] to-[#06D6A0] rounded-2xl mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <SlDocs className="text-white text-4xl" />
+                </div>
+                <h3 className="text-center text-2xl font-bold text-gray-800 group-hover:text-[#1B9AAA] transition-colors">
                   Otros trámites
                 </h3>
               </div>
-              <p className="text-gray-600">
-                - Confección de contratos de prendas, inscripción y cancelación
-                de las mismas.
-              </p>
-              <p className="text-gray-600">- Emisión de CETA </p>
-              <p className="text-gray-600">
-                - Emisión y pago de sellados para verificar su vehículo{" "}
-              </p>
-              <p className="text-gray-600">
-                - R.U.T.A (emisión, renovación, y revocación) para Empresas y
-                Particulares.{" "}
-              </p>
-              <p className="text-gray-600">- Altas y Bajas de motor</p>
-              <p className="text-gray-600">
-                - Levantamiento de Embargos, Inhibición
-              </p>
+              <ul className="space-y-3 text-gray-600 leading-relaxed">
+                <li className="flex items-start">
+                  <span className="text-[#1B9AAA] mr-2">•</span>
+                  Confección de contratos de prendas, inscripción y cancelación de las mismas.
+                </li>
+                <li className="flex items-start">
+                  <span className="text-[#1B9AAA] mr-2">•</span>
+                  Emisión de CETA
+                </li>
+                <li className="flex items-start">
+                  <span className="text-[#1B9AAA] mr-2">•</span>
+                  Emisión y pago de sellados para verificar su vehículo
+                </li>
+                <li className="flex items-start">
+                  <span className="text-[#1B9AAA] mr-2">•</span>
+                  R.U.T.A (emisión, renovación, y revocación) para Empresas y Particulares.
+                </li>
+                <li className="flex items-start">
+                  <span className="text-[#1B9AAA] mr-2">•</span>
+                  Altas y Bajas de motor
+                </li>
+                <li className="flex items-start">
+                  <span className="text-[#1B9AAA] mr-2">•</span>
+                  Levantamiento de Embargos, Inhibición
+                </li>
+              </ul>
             </li>
-            <li className="flex flex-col items-start text-justify w-80 p-8">
-              <div className="flex flex-col items-center w-full mb-5">
-                <FaCarCrash className=" text-[#1B9AAA] text-5xl mb-4" />
-                <h3 className="text-center text-2xl font-extrabold">
+            <li className="group flex flex-col items-start text-justify p-8 bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
+              <div className="flex flex-col items-center w-full mb-6">
+                <div className="p-4 bg-gradient-to-br from-[#1B9AAA] to-[#06D6A0] rounded-2xl mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <FaCarCrash className="text-white text-4xl" />
+                </div>
+                <h3 className="text-center text-2xl font-bold text-gray-800 group-hover:text-[#1B9AAA] transition-colors">
                   Trámites ante el Seguro
                 </h3>
               </div>
-              <p className="text-gray-600">
-                - Bajas por Siniestro, Robo, Hurto, Destrucción y Altas por
-                Recupero.
-              </p>
-              <p className="text-gray-600">
-                - Baja del vehículo ante la delegación tributaria
-                correspondiente
-              </p>
-              <p className="text-gray-600">
-                - Consulta de infracciones en todo el país
-              </p>
+              <ul className="space-y-3 text-gray-600 leading-relaxed">
+                <li className="flex items-start">
+                  <span className="text-[#1B9AAA] mr-2">•</span>
+                  Bajas por Siniestro, Robo, Hurto, Destrucción y Altas por Recupero.
+                </li>
+                <li className="flex items-start">
+                  <span className="text-[#1B9AAA] mr-2">•</span>
+                  Baja del vehículo ante la delegación tributaria correspondiente
+                </li>
+                <li className="flex items-start">
+                  <span className="text-[#1B9AAA] mr-2">•</span>
+                  Consulta de infracciones en todo el país
+                </li>
+              </ul>
             </li>
-            <li className="flex flex-col items-start text-justify w-80 p-8">
-              <div className="flex flex-col items-center w-full mb-5">
-                <FaCar className=" text-[#1B9AAA] text-5xl mb-4" />
-                <h3 className="text-center text-2xl font-extrabold">
+            <li className="group flex flex-col items-start text-justify p-8 bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
+              <div className="flex flex-col items-center w-full mb-6">
+                <div className="p-4 bg-gradient-to-br from-[#1B9AAA] to-[#06D6A0] rounded-2xl mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <FaCar className="text-white text-4xl" />
+                </div>
+                <h3 className="text-center text-2xl font-bold text-gray-800 group-hover:text-[#1B9AAA] transition-colors">
                   Trámites de 0km
                 </h3>
               </div>
-              <p className="text-gray-600">
-                - Inscripción inicial (patentamientos) de su Automóvil,
-                Motovehículo o Maquinaria agrícola
-              </p>
-              <p className="text-gray-600">
-                - Asesoramiento integral sobre la documentación vinculada a su
-                Automotor
-              </p>
+              <ul className="space-y-3 text-gray-600 leading-relaxed">
+                <li className="flex items-start">
+                  <span className="text-[#1B9AAA] mr-2">•</span>
+                  Inscripción inicial (patentamientos) de su Automóvil, Motovehículo o Maquinaria agrícola
+                </li>
+                <li className="flex items-start">
+                  <span className="text-[#1B9AAA] mr-2">•</span>
+                  Asesoramiento integral sobre la documentación vinculada a su Automotor
+                </li>
+              </ul>
             </li>
           </ul>
         </div>
