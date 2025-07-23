@@ -23,15 +23,27 @@ const Slider: React.FC = () => {
     <div className="relative w-full h-[calc(100vh-5rem)] overflow-hidden">
       <SlickSlider {...settings}>
         <div className="relative">
-          <img className="w-full h-[calc(100vh-5rem)] object-cover" src={img1} alt="Gestoría Adriana - Servicios automotores" />
+          <img
+            className="w-full h-[calc(100vh-5rem)] object-cover"
+            src={img1}
+            alt="Gestoría Adriana - Servicios automotores"
+          />
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent"></div>
         </div>
         <div className="relative">
-          <img className="w-full h-[calc(100vh-5rem)] object-cover" src={img2} alt="Trámites automotores profesionales" />
+          <img
+            className="w-full h-[calc(100vh-5rem)] object-cover"
+            src={img2}
+            alt="Trámites automotores profesionales"
+          />
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent"></div>
         </div>
         <div className="relative">
-          <img className="w-full h-[calc(100vh-5rem)] object-cover" src={img3} alt="Mandataria del automotor certificada" />
+          <img
+            className="w-full h-[calc(100vh-5rem)] object-cover"
+            src={img3}
+            alt="Mandataria del automotor certificada"
+          />
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent"></div>
         </div>
       </SlickSlider>
