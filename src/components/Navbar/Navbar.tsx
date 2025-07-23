@@ -35,49 +35,51 @@ const Navbar: React.FC = () => {
   ];
 
   return (
-    <header className="bg-[#e5e6e4] fixed top-0 left-0 z-50 w-full items-center lg:pl-16 lg:pr-16 lg:flex ">
-      <nav className="md:flex w-full justify-between items-center mx-5">
-        <a href="#home" className="flex items-center z-50">
-          <img className="w-24 h-24 mr-2" src={car} />
-          <div className="">
-            <h1 className="text-2xl text-gray-600 font-semibold ">Gestoría</h1>
-            <h1 className="text-3xl font-extrabold text-[#eb5e28]">Adriana</h1>
-          </div>
-        </a>
-        <div
-          onClick={() => setOpen(!open)}
-          className="lg:hidden cursor-pointer z-50 absolute right-8 top-8"
-        >
-          {open ? (
-            <AiOutlineClose className="text-2xl hover:text-gray-500 duration-500" />
-          ) : (
-            <GiHamburgerMenu className="text-2xl hover:text-gray-500 duration-200" />
-          )}
-        </div>
+    <header className="bg-white shadow-sm fixed top-0 left-0 z-50 w-full border-b border-gray-100">
+      <div className="main-container">
+        <nav className="flex w-full justify-between items-center py-4">
+          <a href="#home" className="flex items-center">
+            <img className="w-16 h-16 mr-3" src={car} alt="Gestoría Adriana" />
+            <div>
+              <h1 className="text-lg text-gray-600 font-semibold">Gestoría</h1>
+              <h1 className="text-2xl font-bold text-[#1B9AAA]">Adriana</h1>
+            </div>
+          </a>
 
-        <ul
-          className={`lg:flex lg:items-center lg:pb-0 max-lg:py-6 absolute lg:static bg-[#e5e6e4] lg:z-auto z-[-1] left-0 w-full lg:w-auto transition-all duration-500 ease-in ${
-            open ? "top-20 " : "top-[-490px]"
-          }`}
-        >
-          {Links.map((link) => (
-            <li className="lg:px-0 rounded p-3 ">
-              <a
-                onClick={() => handleSectionClick(`${link.name}`)}
-                className={`${
-                  activeSection === `${link.name}`
-                    ? "px-3 text-xl text-[#eb5e28] font-black rounded"
-                    : "px-3 text-xl block font-semibold text-gray-600 rounded hover:text-[#ef8354]  hover:max-lg:bg-white hover:max-lg:no-underline duration-300"
-                }`}
-                href={`${link.link}`}
-              >
-                {link.name}
-              </a>
-            </li>
-          ))}
-          
-        </ul>
-      </nav>
+          <div
+            onClick={() => setOpen(!open)}
+            className="lg:hidden cursor-pointer p-2 rounded-lg hover:bg-gray-100 transition-colors"
+          >
+            {open ? (
+              <AiOutlineClose className="text-2xl text-gray-700" />
+            ) : (
+              <GiHamburgerMenu className="text-2xl text-gray-700" />
+            )}
+          </div>
+
+          <ul
+            className={`lg:flex lg:items-center absolute lg:static bg-white lg:bg-transparent left-0 w-full lg:w-auto transition-all duration-300 ease-in-out max-lg:shadow-lg max-lg:border-t max-lg:border-gray-200 ${
+              open ? "top-20 py-4" : "top-[-400px]"
+            }`}
+          >
+            {Links.map((link, index) => (
+              <li key={index} className="lg:ml-6">
+                <a
+                  onClick={() => handleSectionClick(`${link.name}`)}
+                  className={`block px-4 py-3 lg:py-2 text-base font-medium transition-colors duration-200 ${
+                    activeSection === `${link.name}`
+                      ? "text-[#1B9AAA] font-semibold border-b-2 border-[#1B9AAA] lg:border-b-2"
+                      : "text-gray-700 hover:text-[#1B9AAA]"
+                  }`}
+                  href={`${link.link}`}
+                >
+                  {link.name}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </div>
     </header>
   );
 };
