@@ -36,7 +36,7 @@ const Contact: React.FC = () => {
             <li className="flex items-start">
               <TbWorldWww className="text-[#1B9AAA] text-3xl mr-3 flex-shrink-0" />
               <a
-                href="https://gestorautomotorortega.com.ar/contacto/"
+                // href="https://gestorautomotorortega.com.ar/contacto/"
                 className="text-gray-600 font-medium hover:text-[#1B9AAA] transition-colors"
               >
                 www.gestoriaadriana.com
